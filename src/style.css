@@ -1,3 +1,14 @@
-h1, p {
+h1,
+p {
   font-family: Lato;
+}
+
+.light {
+  color: black;
+  background-color: white;
+}
+
+.dark {
+  color: white;
+  background-color: black;
 }

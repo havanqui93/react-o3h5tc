@@ -1,19 +1,18 @@
-import React, { useRef, useState, useEffect } from 'react';
+import React, { useContext } from 'react';
+import Pharagraph from './Component/Pharagraph';
+import { ThemeContext } from './ThemeContext';
 import './style.css';
 
 export default function App() {
-  const [input, setInput] = useState('');
-
-  const refInput = useRef();
-  useEffect(() => {
-    console.log(refInput);
-    refInput.current.focus();
-  }, []);
-
+  const themeContext = useContext(ThemeContext);
   return (
     <div>
-      <h1>useRef Tutorials</h1>
-      <input ref={refInput} type="text" value={input} />
+      <input
+        type="button"
+        value="TOGGLE THEME"
+        onClick={themeContext.toggleTheme}
+      />
+      <Pharagraph />
     </div>
   );
 }
